@@ -1,0 +1,60 @@
+@page
+@model WebApplication1.Models.User
+
+<h2>Add User</h2>
+<form method="post" action="@Url.Action("Register", "Register")">
+    <div class="form-group">
+        <label for="FirstName">Firstname</label>
+        <input type="text" id="FirstName" name="FirstName" class="form-control" />
+    </div>
+    <div class="form-group">
+            <label for="LastName">Lastname</label>
+            <input type="text" id="LastName" name="LastName" class="form-control" />
+        </div>
+    <div class="form-group">
+            <label for="Username">Username</label>
+            <input type="text" id="Username" name="Username" class="form-control" />
+        </div>
+    <div class="form-group">
+            <label for="Password">Password</label>
+            <input type="password" id="Password" name="Password" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="Age">Age</label>
+        <input type="number" id="Age" name="Age" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Add User</button>
+</form>
+
+
+@*@page
+@model WebApplication1.Models.User
+<h2>Add User</h2>
+<form method="post">
+    <div class="form-group">
+        <label for="FirstName">@Model.FirstName</label>
+        <input asp-for="FirstName" class="form-control" />
+        <span asp-validation-for="FirstName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label for="LastName">Last Name</label>
+        <input asp-for="LastName" class="form-control" />
+        <span asp-validation-for="LastName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label for="Username">Username</label>
+        <input asp-for="Username" class="form-control" />
+        <span asp-validation-for="Username" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label for="Password">Password</label>
+        <input asp-for="Password" class="form-control" type="password" />
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label for="Age">Age</label>
+        <input asp-for="Age" class="form-control" />
+        <span asp-validation-for="Age" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Add User</button>
+</form>*@

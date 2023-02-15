@@ -1,0 +1,23 @@
+@model List<User>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Age</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in @Model)
+        {
+            <tr>
+                <td>@item.FirstName</td>
+                <td>@item.LastName</td>
+                <td>@item.Age</td>
+                <td><a href="@Url.Action("Delete", "Register", @item)" class="Button">Delete</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
